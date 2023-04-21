@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 // import 'package:quotesapp/screens/second_screen.dart';
 import 'package:http/http.dart' as http;
@@ -16,7 +18,7 @@ class _Jokes extends State<Jokes> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text("Jokes😂")),
+        appBar: AppBar(title: const Text("Jokes😂")),
         body: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -24,7 +26,7 @@ class _Jokes extends State<Jokes> {
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Text(common_name,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.w600,
                           color: Color.fromARGB(255, 0, 102, 255))),

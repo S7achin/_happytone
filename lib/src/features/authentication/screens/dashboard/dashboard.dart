@@ -3,9 +3,9 @@ import 'package:_happytone/src/constants/sizes.dart';
 import 'package:_happytone/src/constants/text_strings.dart';
 import 'package:_happytone/src/features/authentication/screens/dashboard/widgets/appbar.dart';
 import 'package:_happytone/src/features/authentication/screens/dashboard/widgets/banner.dart';
-import 'package:_happytone/src/features/authentication/screens/dashboard/widgets/categories.dart';
-import 'package:_happytone/src/features/authentication/screens/dashboard/widgets/search.dart';
-import 'package:_happytone/src/features/authentication/screens/dashboard/widgets/top_courses.dart';
+// import 'package:_happytone/src/features/authentication/screens/dashboard/widgets/categories.dart';
+// import 'package:_happytone/src/features/authentication/screens/dashboard/widgets/search.dart';
+// import 'package:_happytone/src/features/authentication/screens/dashboard/widgets/top_courses.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
