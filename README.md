@@ -14,3 +14,12 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+
+
+How to Run this Project
+
+1. create a simple flutter app with name _happytone
+2. include dependencies in pubspec.yaml file from this project files.
+3. include assets and lib folder as it is to your project
