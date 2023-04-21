@@ -1,0 +1,63 @@
+name: _happytone
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^4.0.3
+  get: ^4.6.5
+  liquid_swipe: ^3.0.0
+  smooth_page_indicator: ^1.0.1
+  flutter_otp_text_field: ^1.1.1
+  flutter_launcher_icons: ^0.12.0
+  google_sign_in: ^6.0.2
+  cupertino_icons: ^1.0.2
+  line_awesome_flutter: ^2.0.0
+  firebase_core: ^2.7.1
+  firebase_auth: ^4.2.10
+  cloud_firestore: ^4.4.4
+  flutter_chess_board: ^1.0.1
+  http: ^0.13.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/splash_images/logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/images/splash_images/logo.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/images/splash_images/logo.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/images/splash_images/logo.png"
+
+
+flutter:
+  assets:
+    - assets/images/
+    - assets/images/dashboard/
+    - assets/images/on_boarding_images/
+    - assets/images/splash_images/
+    - assets/images/profile/
+    - assets/images/welcome_images/
+    - assets/images/forget_password/
+    - assets/logo/ 
+  uses-material-design: true
+
