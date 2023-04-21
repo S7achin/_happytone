@@ -20,6 +20,7 @@ samples, guidance on mobile development, and a full API reference.
 
 How to Run this Project
 
-1. create a simple flutter app with name _happytone
-2. include dependencies in pubspec.yaml file from this project files.
-3. include assets and lib folder as it is to your project
+1. Create a simple flutter app with name _happytone
+2. Include dependencies in pubspec.yaml file from this project files.
+3. Include assets and lib folder as it is to your project
+4. There is a file firebase_option is is created by firebase it does not work in new project you have to initialize firebase and do its requirements and automatically this file is created.
