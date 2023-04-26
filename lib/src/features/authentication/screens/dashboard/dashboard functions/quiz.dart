@@ -1,5 +1,9 @@
+// ignore_for_file: prefer_final_fields, sort_child_properties_last
+
 import 'package:_happytone/src/constants/sizes.dart';
+import 'package:_happytone/src/features/authentication/models/dashboard/result_screen.dart';
 import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
 import '../../../models/dashboard/question_list.dart';
 
 class QuizPage extends StatefulWidget {
@@ -99,23 +103,56 @@ class _QuizPageState extends State<QuizPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    OutlinedButton(
-                        onPressed: isPressed
-                            ? index + 1 == questions.length
-                                ? () {}
-                                : () {
-                                    _controller!.nextPage(
-                                        duration:
-                                            const Duration(milliseconds: 1),
-                                        curve: Curves.linear);
-                                  }
-                            : null,
-                        child: Text(
-                          index + 1 == questions.length
-                              ? "See Results"
-                              : "Next Question",
-                          style: const TextStyle(color: Colors.white),
-                        )),
+                    MaterialButton(
+                      onPressed: isPressed
+                          ? index + 1 == questions.length
+                              ? () {
+                                  // Get.to(() => const TestResult(score));
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              TestResult(score)));
+                                }
+                              : () {
+                                  _controller!.nextPage(
+                                      duration: const Duration(milliseconds: 1),
+                                      curve: Curves.linear);
+                                }
+                          : null,
+                      color: Colors.orange,
+                      child: Text(
+                        index + 1 == questions.length
+                            ? "See Results"
+                            : "Next Question",
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                      shape: const StadiumBorder(),
+                    ),
+                    //   OutlinedButton(
+                    //       onPressed: isPressed
+                    //           ? index + 1 == questions.length
+                    //               ? () {
+                    //                   // Get.to(() => const TestResult(score));
+                    //                   Navigator.push(
+                    //                       context,
+                    //                       MaterialPageRoute(
+                    //                           builder: (context) =>
+                    //                               TestResult(score)));
+                    //                 }
+                    //               : () {
+                    //                   _controller!.nextPage(
+                    //                       duration:
+                    //                           const Duration(milliseconds: 1),
+                    //                       curve: Curves.linear);
+                    //                 }
+                    //           : null,
+                    //       child: Text(
+                    //         index + 1 == questions.length
+                    //             ? "See Results"
+                    //             : "Next Question",
+                    //         style: const TextStyle(color: Colors.white),
+                    //       )),
                   ],
                 ),
               ],

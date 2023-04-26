@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:_happytone/src/constants/color.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
+import '../../../../../services/theme_services.dart';
+
 class ProfileMenuWidget extends StatelessWidget {
   const ProfileMenuWidget({
     Key? key,
@@ -20,8 +22,9 @@ class ProfileMenuWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
-    var iconColor = isDark ? sPrimaryColor : sAccentColor;
+    // var isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
+    var iconColor = ThemeService().checkdark() ? sPrimaryColor : sAccentColor;
+    // var isDark = ThemeService().checkdark() == true;
 
     return ListTile(
       onTap: onPress,

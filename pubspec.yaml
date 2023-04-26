@@ -11,7 +11,13 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^4.0.3
+  get_storage: ^2.1.1
   get: ^4.6.5
+  intl: 
+  sqflite:
+  date_picker_timeline:
+  flutter_local_notifications: ^13.0.0
+  flutter_native_timezone: ^2.0.0
   liquid_swipe: ^3.0.0
   smooth_page_indicator: ^1.0.1
   flutter_otp_text_field: ^1.1.1

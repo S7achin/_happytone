@@ -9,6 +9,7 @@ import 'package:_happytone/src/constants/text_strings.dart';
 import 'package:_happytone/src/features/authentication/screens/login/login_screen.dart';
 import 'package:_happytone/src/features/authentication/screens/signup/signup_screen.dart';
 import '../../../../common_widgets/fade_in_animation/fade_in_animation_controller.dart';
+import '../../../../services/theme_services.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -21,7 +22,7 @@ class Welcome extends StatelessWidget {
     var mediaquery = MediaQuery.of(context);
     var height = mediaquery.size.height;
     var brightness = mediaquery.platformBrightness;
-    final isDarkMode = brightness == Brightness.dark;
+    final isDarkMode = ThemeService().checkdark() == true;
 
     return Scaffold(
       backgroundColor: isDarkMode ? sSecondaryColor : sPrimaryColor,

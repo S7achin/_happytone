@@ -1,9 +1,12 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 // import 'package:quotesapp/screens/second_screen.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+
+import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 class Jokes extends StatefulWidget {
   const Jokes({super.key});
@@ -18,7 +21,13 @@ class _Jokes extends State<Jokes> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: const Text("Jokes😂")),
+        appBar: AppBar(
+            centerTitle: true,
+            leading: IconButton(
+              onPressed: () => Get.back(),
+              icon: const Icon(LineAwesomeIcons.angle_left),
+            ),
+            title: const Text("Jokes😂")),
         body: Center(
           child: SingleChildScrollView(
             child: Column(

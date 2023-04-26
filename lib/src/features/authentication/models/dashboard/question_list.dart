@@ -2,59 +2,65 @@ import 'package:_happytone/src/features/authentication/models/dashboard/question
 
 List<QuestionModel> questions = [
   QuestionModel("Little interest or pleasure in doing things?", {
-    "Not at all": false,
+    "Nearly every day": false,
+    "More than half days": false,
     "On Several days": true,
-    "More than half days": true,
-    "Nearly every day": true
+    "Not at all": true,
   }),
   QuestionModel("Feeling down, depressed or hopeless?", {
+    "Nearly every day": false,
+    "More than half days": false,
+    "On Several days": false,
     "Not at all": true,
-    "On Several days": true,
-    "More than half days": true,
-    "Nearly every day": true
   }),
   QuestionModel("Trouble falling or staying asleep, or sleeping too much?", {
+    "Nearly every day": false,
+    "More than half days": false,
+    "On Several days": false,
     "Not at all": true,
-    "On Several days": true,
-    "More than half days": true,
-    "Nearly every day": true
   }),
   QuestionModel("Feeling tired or having little enery?", {
-    "Not at all": true,
+    "Nearly every day": false,
+    "More than half days": false,
     "On Several days": true,
-    "More than half days": true,
-    "Nearly every day": true
+    "Not at all": true,
   }),
   QuestionModel("Poor appetite or overeating?", {
-    "Not at all": true,
+    "Nearly every day": false,
+    "More than half days": false,
     "On Several days": true,
-    "More than half days": true,
-    "Nearly every day": true
+    "Not at all": true,
   }),
   QuestionModel("Feeling bad about yourself or that you are a failure?", {
+    "Nearly every day": false,
+    "More than half days": false,
+    "On Several days": false,
     "Not at all": true,
-    "On Several days": true,
-    "More than half days": true,
-    "Nearly every day": true
   }),
   QuestionModel(
       "Trouble concentrating on things such as reading the newspaper?", {
+    "Nearly every day": false,
+    "More than half days": false,
+    "On Several days": false,
     "Not at all": true,
-    "On Several days": true,
-    "More than half days": true,
-    "Nearly every day": true
   }),
   QuestionModel("Moving on speaking slowly that others could have noticed?", {
-    "Not at all": true,
+    "Nearly every day": false,
+    "More than half days": false,
     "On Several days": true,
-    "More than half days": true,
-    "Nearly every day": true
+    "Not at all": true,
   }),
   QuestionModel(
       "Being fidgety or restless hence moving around more than usual?", {
+    "Nearly every day": false,
+    "More than half days": false,
+    "On Several days": false,
     "Not at all": true,
-    "On Several days": true,
-    "More than half days": true,
-    "Nearly every day": true
+  }),
+  QuestionModel("Feeling sad without any reason?", {
+    "Nearly every day": false,
+    "More than half days": false,
+    "On Several days": false,
+    "Not at all": true,
   }),
 ];

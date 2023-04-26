@@ -1,3 +1,5 @@
+import 'package:_happytone/src/services/notification.dart';
+import 'package:_happytone/src/services/theme_services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:_happytone/src/constants/color.dart';
@@ -8,15 +10,19 @@ import 'package:_happytone/src/features/authentication/screens/profile/functions
 import 'package:_happytone/src/features/authentication/screens/profile/update_profile_screen.dart';
 import 'package:_happytone/src/features/authentication/screens/profile/widgets/profile_menu.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
-
 import '../../../../repository/authentication_repository/authentication_repository.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
   @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  @override
   Widget build(BuildContext context) {
-    var isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
+    var isDark = ThemeService().checkdark() == true;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -31,7 +37,15 @@ class ProfileScreen extends StatelessWidget {
           ),
           actions: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  ThemeService().switchTheme();
+                  NotificationService().showNotification(
+                    title: "Theme Changed",
+                    body: isDark
+                        ? "Activated Dark Theme"
+                        : "Activated Light Theme",
+                  );
+                },
                 icon: Icon(
                     isDark ? LineAwesomeIcons.sun : LineAwesomeIcons.moon)),
           ],

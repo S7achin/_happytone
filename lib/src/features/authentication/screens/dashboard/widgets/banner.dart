@@ -1,5 +1,6 @@
 // import 'dart:math';
 
+import 'package:_happytone/src/features/authentication/screens/dashboard/dashboard%20functions/Todo_List/todo_list.dart';
 import 'package:_happytone/src/features/authentication/screens/dashboard/dashboard%20functions/jokes.dart';
 import 'package:_happytone/src/features/authentication/screens/dashboard/dashboard%20functions/quiz.dart';
 import 'package:flutter/material.dart';
@@ -79,43 +80,46 @@ class BannerWidget extends StatelessWidget {
             Expanded(
               child: Column(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: sCardBgColor),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 10),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Flexible(
-                                  child: Image(
-                                image: AssetImage(sDiary1),
-                              )),
-                              Flexible(
-                                  child: Image(
-                                image: AssetImage(sDiary2),
-                              )),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: sDashboardPadding,
-                          ),
-                          Text(
-                            sDashboardBannerTitle2,
-                            style: txtTheme.labelMedium,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          // Text(
-                          //   sDashboardBannerSubTitle,
-                          //   style: txtTheme.labelSmall,
-                          //   overflow: TextOverflow.ellipsis,
-                          // ),
-                        ]),
+                  GestureDetector(
+                    onTap: () => Get.to(() => const TodoList()),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: sCardBgColor),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 10),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: const [
+                                Flexible(
+                                    child: Image(
+                                  image: AssetImage(sDiary1),
+                                )),
+                                Flexible(
+                                    child: Image(
+                                  image: AssetImage(sDiary2),
+                                )),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: sDashboardPadding,
+                            ),
+                            Text(
+                              sDashboardBannerTitle2,
+                              style: txtTheme.labelMedium,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            // Text(
+                            //   sDashboardBannerSubTitle,
+                            //   style: txtTheme.labelSmall,
+                            //   overflow: TextOverflow.ellipsis,
+                            // ),
+                          ]),
+                    ),
                   ),
                   const SizedBox(
                     height: sDashboardPadding + 10,

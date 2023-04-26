@@ -8,6 +8,7 @@ class SAppTheme {
   SAppTheme._();
 
   static ThemeData lightTheme = ThemeData(
+      // primaryColor: Colors.blue,
       brightness: Brightness.light,
       textTheme: STextTheme.lightTextTheme,
       outlinedButtonTheme: SOutlinedButtonTheme.lightOutlinedButtonTheme,
@@ -15,6 +16,7 @@ class SAppTheme {
       inputDecorationTheme: STextFormFieldTheme.lightInputDecorationTheme);
 
   static ThemeData darkTheme = ThemeData(
+      // primaryColor: Colors.blue,
       brightness: Brightness.dark,
       textTheme: STextTheme.darkTextTheme,
       outlinedButtonTheme: SOutlinedButtonTheme.darkOutlinedButtonTheme,
