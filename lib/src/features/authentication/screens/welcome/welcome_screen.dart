@@ -21,7 +21,6 @@ class Welcome extends StatelessWidget {
 
     var mediaquery = MediaQuery.of(context);
     var height = mediaquery.size.height;
-    var brightness = mediaquery.platformBrightness;
     final isDarkMode = ThemeService().checkdark() == true;
 
     return Scaffold(

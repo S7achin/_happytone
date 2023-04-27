@@ -15,9 +15,10 @@ dependencies:
   get: ^4.6.5
   intl: 
   sqflite:
+  flutter_staggered_animations:
   date_picker_timeline:
   flutter_local_notifications: ^13.0.0
-  flutter_native_timezone: ^2.0.0
+  flutter_native_timezone:
   liquid_swipe: ^3.0.0
   smooth_page_indicator: ^1.0.1
   flutter_otp_text_field: ^1.1.1

@@ -1,3 +1,6 @@
+// ignore_for_file: unused_import
+
+import 'package:_happytone/src/features/authentication/db/db_helper.dart';
 import 'package:_happytone/src/services/notification.dart';
 import 'package:_happytone/src/services/theme_services.dart';
 import 'package:flutter/material.dart';
@@ -42,9 +45,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   NotificationService().showNotification(
                     title: "Theme Changed",
                     body: isDark
-                        ? "Activated Dark Theme"
-                        : "Activated Light Theme",
+                        ? "Activated Light Theme"
+                        : "Activated Dark Theme",
                   );
+                  // NotificationService().scheduledNotification();
                 },
                 icon: Icon(
                     isDark ? LineAwesomeIcons.sun : LineAwesomeIcons.moon)),

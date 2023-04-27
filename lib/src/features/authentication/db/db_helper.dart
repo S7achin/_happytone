@@ -1,19 +1,19 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, prefer_interpolation_to_compose_strings, no_leading_underscores_for_local_identifiers
 
 import 'package:_happytone/src/features/authentication/models/database_model/task.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DBHelper {
   static Database? _db;
-  static final int _version = 1;
-  static final String _tableName = "task2";
+  static const int _version = 1;
+  static const String _tableName = "task3";
 
   static Future<void> initDb() async {
     if (_db != null) {
       return;
     }
     try {
-      String _path = await getDatabasesPath() + 'task2.db';
+      String _path = await getDatabasesPath() + 'task3.db';
       _db = await openDatabase(
         _path,
         version: _version,
@@ -43,5 +43,17 @@ class DBHelper {
   static Future<List<Map<String, dynamic>>> query() async {
     print("query function called");
     return await _db!.query(_tableName);
+  }
+
+  static delete(Task task) async {
+    return await _db!.delete(_tableName, where: 'id=?', whereArgs: [task.id]);
+  }
+
+  static update(int? id) async {
+    return await _db!.rawUpdate('''
+        UPDATE $_tableName 
+        SET isCompleted = ?
+        WHERE id = ?
+    ''', [1, id]);
   }
 }
